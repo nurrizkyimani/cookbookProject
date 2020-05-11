@@ -26,4 +26,28 @@
 
     </style>
 
+    <!-- styles.xml -->
+    <style name="featured">
+        <item name="android:textSize">
+            36sp
+        </item>
+
+        <item name="android:textColor">
+            #000000
+        </item>
+    </style>
+
+
+    <style name="explore_fro">
+
+        <item name="android:textSize">
+            20sp
+        </item>
+
+        <item name="android:textColor">
+            #000000
+        </item>
+
+    </style>
+
 </resources>

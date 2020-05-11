@@ -7,5 +7,17 @@
 
     <string name="login">Login</string>
 
+    <!-- strings.xml -->
+    <string name="featured">
+
+Featured
+</string>
+
+    <string name="explore_fro">
+
+Explore from categories
+</string>
+
+
 
 </resources>
