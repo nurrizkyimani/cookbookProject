@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+    <!-- drawable/button.xml -->
+<vector
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:aapt="http://schemas.android.com/aapt"
+    android:width="178dp"
+    android:height="52dp"
+    android:viewportWidth="178"
+    android:viewportHeight="52"
+    >
+
+    <group>
+
+        <clip-path
+            android:pathData="M25 0H153C166.807 0 178 11.1929 178 25V27C178 40.8071 166.807 52 153 52H25C11.1929 52 0 40.8071 0 27V25C0 11.1929 11.1929 0 25 0Z"
+            />
+
+        <path
+            android:pathData="M0 0V52H178V0"
+            android:fillColor="#FFFFFF"
+            />
+
+    </group>
+
+</vector>
+
+
