@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<layout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <androidx.cardview.widget.CardView
+        app:cardBackgroundColor="@color/colorGrid"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="8dp"
+        app:cardElevation="1dp"
+        app:cardCornerRadius="10dp"
+        >
+
+        <RelativeLayout
+
+            android:id="@+id/grid_card"
+            android:layout_width="match_parent"
+            android:layout_margin="3dp"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:padding="5dp">
+
+            <ImageView
+                android:id="@+id/img_ilus"
+                android:layout_centerHorizontal="true"
+                android:layout_width="70dp"
+                android:layout_height="70dp"
+                android:layout_marginLeft="8dp"
+                android:layout_marginTop="2dp"/>
+
+            <TextView
+                android:id="@+id/tv_ilus"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/img_ilus"
+                android:drawablePadding="10dp"
+                android:layout_marginLeft="25dp"
+                android:layout_marginTop="15dp"
+                android:text="Covid-19"
+                android:textColor="#FFF"
+                android:layout_centerHorizontal="true"
+                />
+
+
+        </RelativeLayout>
+
+    </androidx.cardview.widget.CardView>
+
+</layout>
