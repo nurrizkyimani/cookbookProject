@@ -46,32 +46,32 @@ class HomeFragment : Fragment() {
         gridItems.add(
             GridModel(
                 R.drawable.ic_grid2,
-                "Gejala"
+                "30 mins or less"
             )
         )
         gridItems.add(
             GridModel(
                 R.drawable.ic_grid3,
-                "Pencegahan"
+                "Vegetarian"
             )
         )
         gridItems.add(
             GridModel(
                 R.drawable.ic_grid4,
-                "Penyembuhan"
+                "Baking Class"
             )
         )
 
         gridItems.add(
             GridModel(
                 R.drawable.ic_grid5,
-                "Penyembuhan"
+                "Beverages"
             )
         )
         gridItems.add(
             GridModel(
                 R.drawable.ic_grid6,
-                "Penyembuhan"
+                "Crowd' Favorite"
             )
         )
 
