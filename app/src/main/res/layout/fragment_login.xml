@@ -9,17 +9,19 @@
     tools:context=".ui.LoginFragment">
 
 
-
     <TextView
         android:id="@+id/cook_book"
         android:layout_width="192dp"
         android:layout_height="160dp"
+
+        android:layout_alignParentTop="true"
+        android:layout_alignParentEnd="true"
+        android:fontFamily="@font/playfair_display"
         android:gravity="top"
         android:lineSpacingExtra="0sp"
         android:text="@string/cook_book"
         android:textAppearance="@style/cook_book"
-        android:layout_alignParentEnd="true"
-        android:layout_alignParentTop="true"/>
+        app:lineHeight="80sp" />
 
 
     <ImageView
@@ -78,7 +80,7 @@
             android:text="login"
             android:textSize="18sp"
             app:layout_constraintBottom_toTopOf="@+id/button2"
-            app:layout_constraintEnd_toEndOf="@+id/button2"/>
+            app:layout_constraintEnd_toEndOf="@+id/button2" />
 
 
 
