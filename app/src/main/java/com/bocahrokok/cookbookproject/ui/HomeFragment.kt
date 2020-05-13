@@ -5,6 +5,7 @@ import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import androidx.lifecycle.ViewModelProvider
 import androidx.navigation.Navigation
 import androidx.navigation.findNavController
 import androidx.navigation.fragment.findNavController
@@ -14,10 +15,14 @@ import androidx.recyclerview.widget.GridLayoutManager
 import androidx.recyclerview.widget.LinearLayoutManager
 
 import com.bocahrokok.cookbookproject.R
+import com.bocahrokok.cookbookproject.database.HomeDatabase
 import com.bocahrokok.cookbookproject.model.FeaturedModel
 import com.bocahrokok.cookbookproject.model.GridModel
+import com.bocahrokok.cookbookproject.repository.CookbookRepository
 import com.bocahrokok.cookbookproject.ui.Adapter.CategoryGridAdapter
 import com.bocahrokok.cookbookproject.ui.Adapter.FeaturedListAdapter
+import com.bocahrokok.cookbookproject.viewmodels.HomeViewModel
+import com.bocahrokok.cookbookproject.viewmodels.HomeViewModelProviderFactory
 import kotlinx.android.synthetic.main.fragment_home.*
 
 /**
@@ -25,15 +30,7 @@ import kotlinx.android.synthetic.main.fragment_home.*
  */
 class HomeFragment : Fragment() {
 
-    override fun onCreate(savedInstanceState: Bundle?) {
-        super.onCreate(savedInstanceState)
 
-
-// setup navigation with root destinations and toolbar
-//        NavigationUI.setupWithNavController(bottom_navigation, navController)
-//        val navController = findNavController(R.id.bottom_navigation)
-
-    }
 
     override fun onActivityCreated(savedInstanceState: Bundle?) {
         super.onActivityCreated(savedInstanceState)
@@ -120,12 +117,29 @@ class HomeFragment : Fragment() {
 
     }
 
+
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View? {
         // Inflate the layout for this fragment
         return inflater.inflate(R.layout.fragment_home, container, false)
+    }
+
+    lateinit var viewModel: HomeViewModel
+
+    override fun onCreate(savedInstanceState: Bundle?) {
+        super.onCreate(savedInstanceState)
+
+        val repository =  CookbookRepository(HomeDatabase.invoke(requireContext()))
+        val ListViewModelProviderFactory2 = HomeViewModelProviderFactory(repository)
+        viewModel = ViewModelProvider(this, ListViewModelProviderFactory2).get(HomeViewModel::class.java)
+
+
+// setup navigation with root destinations and toolbar
+//        NavigationUI.setupWithNavController(bottom_navigation, navController)
+//        val navController = findNavController(R.id.bottom_navigation)
+
     }
 
 }

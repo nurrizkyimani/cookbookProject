@@ -1,3 +1,10 @@
 package com.bocahrokok.cookbookproject.model
 
-data class FeaturedModel( val pict:Int? ,val name: String)
+import androidx.room.Entity
+import androidx.room.PrimaryKey
+
+@Entity(tableName = "featured")
+data class FeaturedModel(
+    val pict:Int? ,
+    @PrimaryKey
+    val name: String)
