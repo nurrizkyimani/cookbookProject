@@ -14,8 +14,10 @@ import androidx.recyclerview.widget.GridLayoutManager
 import androidx.recyclerview.widget.LinearLayoutManager
 
 import com.bocahrokok.cookbookproject.R
+import com.bocahrokok.cookbookproject.model.FeaturedModel
 import com.bocahrokok.cookbookproject.model.GridModel
 import com.bocahrokok.cookbookproject.ui.Adapter.CategoryGridAdapter
+import com.bocahrokok.cookbookproject.ui.Adapter.FeaturedListAdapter
 import kotlinx.android.synthetic.main.fragment_home.*
 
 /**
@@ -85,7 +87,36 @@ class HomeFragment : Fragment() {
                 )
         }
 
-        var featuredItems: ArrayList<GridModel> = ArrayList()
+        var featuredItems: ArrayList<FeaturedModel> = ArrayList()
+
+        featuredItems.add(
+            FeaturedModel(
+                R.drawable.food_1,
+                "Frech Omellete"
+            )
+        )
+
+        featuredItems.add(
+            FeaturedModel(
+                R.drawable.food_2,
+                "Riccotta Gnocc"
+            )
+        )
+        featuredItems.add(
+            FeaturedModel(
+                R.drawable.food_3,
+                "Shimp Soup"
+            )
+        )
+
+        rv_featured.also {
+            it.layoutManager = LinearLayoutManager(requireContext(), LinearLayoutManager.HORIZONTAL, false )
+            it.setHasFixedSize(true)
+            it.adapter =
+                FeaturedListAdapter(
+                    featuredItems
+                )
+        }
 
     }
 

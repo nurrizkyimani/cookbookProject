@@ -20,6 +20,15 @@
 
     <!-- Featured -->
 
+    <SearchView
+        android:id="@+id/search_favorite"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:layout_marginTop="60dp"
+        android:background="@drawable/search_draw"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
     <TextView
         android:id="@+id/featured"
         android:layout_width="148dp"
@@ -28,7 +37,6 @@
         android:layout_alignParentTop="true"
         android:layout_marginTop="148dp"
         android:gravity="top"
-
         android:text="Featured"
         android:textAppearance="@style/featured"
         app:layout_constraintStart_toStartOf="parent"
@@ -37,13 +45,13 @@
     <androidx.recyclerview.widget.RecyclerView
         android:id="@+id/rv_featured"
         android:layout_width="match_parent"
-        android:layout_height="200dp"
+        android:layout_height="wrap_content"
         android:layout_marginTop="1dp"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/featured" />
 
     <TextView
-        android:id="@+id/explore_fro"
+        android:id="@+id/explore_featured"
         android:layout_width="230dp"
         android:layout_height="23dp"
         android:layout_alignParentLeft="true"
@@ -61,7 +69,7 @@
         android:layout_height="wrap_content"
         android:layout_marginTop="8dp"
         app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/explore_fro"
+        app:layout_constraintTop_toBottomOf="@+id/explore_featured"
         app:layout_constraintVertical_bias="0.0"
         tools:layout_editor_absoluteX="16dp" />
 

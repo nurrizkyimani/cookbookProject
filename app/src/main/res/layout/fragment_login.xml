@@ -75,6 +75,8 @@
             android:layout_marginBottom="24dp"
             android:background="@drawable/button"
             android:elevation="2dp"
+            android:text="login"
+            android:textSize="18sp"
             app:layout_constraintBottom_toTopOf="@+id/button2"
             app:layout_constraintEnd_toEndOf="@+id/button2"/>
 
@@ -87,6 +89,8 @@
             android:layout_height="52dp"
             android:layout_marginEnd="116dp"
             android:layout_marginBottom="68dp"
+            android:text="Sign Up"
+            android:textSize="18sp"
             android:background="@drawable/button2"
             app:layout_constraintBottom_toBottomOf="@+id/rectangle_1"
             app:layout_constraintEnd_toEndOf="parent" />
